@@ -3,10 +3,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DB_CONFIG = {
-    'dbname': os.getenv('DB_NAME', 'minha_base'),
-    'user': os.getenv('DB_USER', 'postgres'),
-    'password': os.getenv('DB_PASSWORD', 'sua_senha'),
-    'host': os.getenv('DB_HOST', 'localhost'),
-    'port': os.getenv('DB_PORT', '5432'),
-}
+class Config:
+    SQLALCHEMY_DATABASE_URI = f"{os.getenv('DATABASE_URL')}?client_encoding=utf8"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

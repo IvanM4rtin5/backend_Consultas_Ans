@@ -1,11 +1,11 @@
 from flask import Blueprint, jsonify
-from ..database import get_db_connection
+from ..database import get_db
 
 health_bp = Blueprint('health', __name__)
 
 @health_bp.route('/health', methods=['GET'])
 def health_check():
-    conn = get_db_connection()
+    conn = get_db()
     if not conn:
         return jsonify({'status': 'error', 'message': 'Banco de dados fora do ar'}), 500
 

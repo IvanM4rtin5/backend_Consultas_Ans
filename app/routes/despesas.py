@@ -1,12 +1,12 @@
 import psycopg2.extras
 from flask import Blueprint, jsonify
-from ..database import get_db_connection
+from ..database import get_db
 
 despesas_bp = Blueprint('despesas', __name__)
 
 @despesas_bp.route('/despesas/trimestre', methods=['GET'])
 def maiores_despesas_trimestre():
-    conn = get_db_connection()
+    conn = get_db()
     if not conn:
         return jsonify({'status': 'error', 'message': 'Erro ao conectar ao banco'}), 500
 

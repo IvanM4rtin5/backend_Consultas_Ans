@@ -1,0 +1,60 @@
+# Diretórios e arquivos específicos do projeto
+/arquivos/          
+*.pdf               
+*.csv               
+Teste_*.zip         
+
+# Ambiente virtual Python
+venv/
+.env/
+pythonenv*/
+
+# Cache e arquivos temporários do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+
+# Arquivos de IDE/Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Dependências Python instaladas
+site-packages/
+lib/
+lib64/
+bin/
+include/
+
+# Arquivos de log e bancos de dados
+*.log
+*.sqlite
+*.db
+
+# Arquivos de configuração local
+.env.local
+.env.development
+.env.test
+.env.production
+config.ini
+
+# Arquivos de compilação/pacotes
+build/
+dist/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Arquivos temporários
+*.tmp
+*.temp

@@ -60,13 +60,14 @@ CREATE DATABASE minha_base;
 ```
 2. Configure as variáveis de ambiente no .env:
 
-ini
+```ini
 Copy
 DB_USER=postgres
 DB_PASSWORD=senha_secreta
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=minha_base
+```
 
 **Instalação**
 

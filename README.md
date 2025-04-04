@@ -65,7 +65,7 @@ DB_NAME=minha_base
 
 ```bash
 Copy
-git clone https://github.com/seu-usuario/api-ans.git
+git clone https://github.com/IvanM4rtin5/backend_Consultas_Ans.git
 cd api-ans
 python -m venv venv
 source venv/bin/activate  # Linux/Mac

@@ -60,8 +60,7 @@ CREATE DATABASE minha_base;
 ```
 2. Configure as variáveis de ambiente no .env:
 
-```ini
-Copy
+```ini Copy
 DB_USER=postgres
 DB_PASSWORD=senha_secreta
 DB_HOST=localhost
@@ -71,8 +70,7 @@ DB_NAME=minha_base
 
 **Instalação**
 
-```bash
-Copy
+```bash Copy
 git clone https://github.com/IvanM4rtin5/backend_Consultas_Ans.git
 cd api-ans
 python -m venv venv

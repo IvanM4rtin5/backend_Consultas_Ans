@@ -162,5 +162,7 @@ Dados de Exemplo: CSVs devem seguir estrutura das tabelas demonstracoes_contabei
 ### 📧 Contato
 
 **Desenvolvedor:** Ivan Martins
+
 ***Email:** ivanmarti.alves@gmail.com
+
 **LinkedIn:** https://www.linkedin.com/in/ivan-martins-alves/

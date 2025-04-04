@@ -22,7 +22,7 @@ API backend para consulta de despesas de operadoras de saúde, integrada a um ba
 
 ---
 
-## 🧩 Funcionalidades Principales
+## 🧩 Funcionalidades Principaies
 
 ### **API RESTful**
 - Consulta das maiores despesas por trimestre
@@ -44,6 +44,13 @@ API backend para consulta de despesas de operadoras de saúde, integrada a um ba
 - Python 3.10+
 - PostgreSQL 17+
 - Postman (para testar endpoints)
+
+### Baixar arquivos em csv no site da ans
+
+- o usaurio terá que baixar os arquivos csv no sites
+- https://dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/
+- https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/
+- inserir na pasta **Uploads**
 
 ### Configuração Inicial
 1. Crie um banco PostgreSQL:

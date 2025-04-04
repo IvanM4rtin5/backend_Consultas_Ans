@@ -79,31 +79,27 @@ venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 ```
 **Inicialização do Banco**
-```bash
-Copy
+```bash Copy
 python create_db.py  # Cria tabelas e índices
 python import_csv.py  # Importa dados dos CSVs
 ```
 **Executar a API**
-```bash
-Copy
+```bash Copy
 python run.py  # Inicia servidor em http://localhost:5000
 ```
 ## 📡 Endpoints Principales
 **Health Check**
-```http
-Copy
+```http Copy
 GET /api/health
 ```
 **Top 10 Despesas do Último Trimestre**
-```http
-Copy
+```http Copy
 GET /api/despesas/trimestre
 ```
 **Resposta de Exemplo:**
 
-```json
-Copy
+```json Copy
+
 {
   "status": "success",
   "data": [
@@ -133,11 +129,12 @@ api-ans/
 ├── requirements.txt       # Dependências
 └── run.py                 # Entrypoint da aplicação
 ```
+
 ### 🔍 Consultas SQL Exemplo
 Consulta utilizada no endpoint /despesas/trimestre:
 
-```sql
-Copy
+```sql Copy
+
 WITH UltimoTrimestre AS (
   SELECT MAX(data) AS data_max FROM demonstracoes_contabeis
 )

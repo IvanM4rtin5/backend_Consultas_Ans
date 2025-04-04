@@ -1,19 +1,15 @@
-import psycopg2.extras
 from flask import Blueprint, jsonify
+from sqlalchemy import text
 from ..database import get_db
 
 despesas_bp = Blueprint('despesas', __name__)
 
 @despesas_bp.route('/despesas/trimestre', methods=['GET'])
 def maiores_despesas_trimestre():
-    conn = get_db()
-    if not conn:
-        return jsonify({'status': 'error', 'message': 'Erro ao conectar ao banco'}), 500
+    session = next(get_db())
 
     try:
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-
-        query = """
+        query = text("""
             WITH UltimoTrimestre AS (
                 SELECT MAX(data) AS data_max FROM demonstracoes_contabeis
             )
@@ -27,11 +23,10 @@ def maiores_despesas_trimestre():
             GROUP BY o.razao_social, o.registro_ans, o.modalidade
             ORDER BY total_despesas DESC
             LIMIT 10;
-        """
-        cursor.execute(query)
-        resultado = cursor.fetchall()
+        """)
 
-        colunas = [desc[0] for desc in cursor.description]
+        resultado = session.execute(query)
+        colunas = resultado.keys()
         resultado_lista = [dict(zip(colunas, row)) for row in resultado]
 
         return jsonify({'status': 'success', 'data': resultado_lista})
@@ -40,5 +35,4 @@ def maiores_despesas_trimestre():
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
     finally:
-        if conn:
-            conn.close()
+        session.close()

@@ -47,10 +47,12 @@ API backend para consulta de despesas de operadoras de saúde, integrada a um ba
 
 ### Baixar arquivos em csv no site da ans
 
-- o usaurio terá que baixar os arquivos csv no sites
+1. o usuario terá que baixar os arquivos csv nos sites(selecionando o ano de interesse):
+  
 - https://dadosabertos.ans.gov.br/FTP/PDA/demonstracoes_contabeis/
 - https://dadosabertos.ans.gov.br/FTP/PDA/operadoras_de_plano_de_saude_ativas/
-- inserir na pasta **Uploads**
+
+2. inserir na pasta **Uploads**
 
 ### Configuração Inicial
 1. Crie um banco PostgreSQL:

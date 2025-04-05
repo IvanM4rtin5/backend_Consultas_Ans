@@ -74,15 +74,15 @@ def importar_demonstracoes(df):
 
     session=Session()
 
-    df["data"] = pd.to_datetime(df["data"], format="%Y-%m-%d", errors="coerce")
+    df["data"] = pd.to_datetime(df["data"], format="%Y-%m-%d", errors="coerce").dt.date
     df = df.dropna(subset=["data"])
     df["reg_ans"] = df["reg_ans"].astype(str)
     df["cd_conta_contabil"] = df["cd_conta_contabil"].astype(str)
 
     registros_existentes = {
-        (str(row.data), row.reg_ans, row.cd_conta_contabil)
-        for row in session.query(
-            cast(DemonstracoesContabeis.data, Date),
+        (data, reg_ans, cd_conta_contabil)
+        for data, reg_ans, cd_conta_contabil in session.query(
+            DemonstracoesContabeis.data, 
             DemonstracoesContabeis.reg_ans,
             DemonstracoesContabeis.cd_conta_contabil
         ).all()

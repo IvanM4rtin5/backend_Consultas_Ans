@@ -6,7 +6,7 @@ despesas_bp = Blueprint('despesas', __name__)
 
 @despesas_bp.route('/despesas/trimestre', methods=['GET'])
 def maiores_despesas_trimestre():
-    session = next(get_db())
+    session = (get_db())
 
     try:
         query = text("""

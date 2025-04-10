@@ -29,7 +29,8 @@ API backend para consulta de despesas de operadoras de saúde, integrada a um ba
 - Endpoint de health check
 - Filtragem por operadora e período
 - Paginação de resultados
-**Consultas no Postman**
+- **Consultas no Postman**
+
 ![Image](https://github.com/IvanM4rtin5/backend_Consultas_Ans/blob/main/public/image/consulta_postman.jpeg)
 
 ### **Banco de Dados**
@@ -37,7 +38,8 @@ API backend para consulta de despesas de operadoras de saúde, integrada a um ba
 - Índices para performance em grandes datasets
 - Relação entre operadoras e demonstrações contábeis
 - Importação de dados via CSV
-**Consultas no SQL**
+- **Consultas no SQL**
+
 ![Image](https://github.com/IvanM4rtin5/backend_Consultas_Ans/blob/main/public/image/consulta_sql.png)
 
 ---

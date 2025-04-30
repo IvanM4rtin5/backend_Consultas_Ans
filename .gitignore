@@ -41,6 +41,7 @@ include/
 *.db
 
 # Arquivos de configuração local
+.env
 .env.local
 .env.development
 .env.test
@@ -54,7 +55,5 @@ dist/
 *.egg
 *.manifest
 *.spec
-
-# Arquivos temporários
 *.tmp
 *.temp

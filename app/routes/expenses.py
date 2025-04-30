@@ -2,9 +2,9 @@ from flask import Blueprint, jsonify
 from sqlalchemy import text
 from ..database import get_db
 
-despesas_bp = Blueprint('despesas', __name__)
+expenses_bp = Blueprint('despesas', __name__)
 
-@despesas_bp.route('/despesas/trimestre', methods=['GET'])
+@expenses_bp.route('/despesas/trimestre', methods=['GET'])
 def maiores_despesas_trimestre():
     session = (get_db())
 
